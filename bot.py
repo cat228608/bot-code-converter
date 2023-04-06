@@ -60,6 +60,10 @@ async def input_set(message: types.Message):
         types.InlineKeyboardButton(text="Rust", callback_data="set_input:Rust"),
         types.InlineKeyboardButton(text="JavaScript", callback_data="set_input:JavaScript"),
         types.InlineKeyboardButton(text="Java", callback_data="set_input:Java"),
+        types.InlineKeyboardButton(text="Julia", callback_data="set_input:Julia"),
+        types.InlineKeyboardButton(text="Go", callback_data="set_input:Go"),
+        types.InlineKeyboardButton(text="Lua", callback_data="set_input:Lua"),
+        types.InlineKeyboardButton(text="Dart", callback_data="set_input:Dart"),
         types.InlineKeyboardButton(text="Отмена", callback_data="set_input:Back")
         ]
     keyboard.add(*buttons)
@@ -83,6 +87,10 @@ async def out_set(message: types.Message):
         types.InlineKeyboardButton(text="Rust", callback_data="set:Rust"),
         types.InlineKeyboardButton(text="JavaScript", callback_data="set:JavaScript"),
         types.InlineKeyboardButton(text="Java", callback_data="set:Java"),
+        types.InlineKeyboardButton(text="Julia", callback_data="set:Julia"),
+        types.InlineKeyboardButton(text="Go", callback_data="set:Go"),
+        types.InlineKeyboardButton(text="Lua", callback_data="set:Lua"),
+        types.InlineKeyboardButton(text="Dart", callback_data="set:Dart"),
         types.InlineKeyboardButton(text="Отмена", callback_data="set:Back")
         ]
     keyboard.add(*buttons)
@@ -112,7 +120,11 @@ async def start(message: types.Message):
             types.InlineKeyboardButton(text="Ruby", callback_data="save:Ruby"),
             types.InlineKeyboardButton(text="Rust", callback_data="save:Rust"),
             types.InlineKeyboardButton(text="JavaScript", callback_data="save:JavaScript"),
-            types.InlineKeyboardButton(text="Java", callback_data="save:Java")
+            types.InlineKeyboardButton(text="Java", callback_data="save:Java"),
+            types.InlineKeyboardButton(text="Julia", callback_data="save:Julia"),
+            types.InlineKeyboardButton(text="Go", callback_data="save:Go"),
+            types.InlineKeyboardButton(text="Lua", callback_data="save:Lua"),
+            types.InlineKeyboardButton(text="Dart", callback_data="save:Dart")
         ]
         keyboard_one.add(*buttons)
         await bot.send_message(message.chat.id, "Добро пожаловать в бота для конвертации языков программирования!\n\nКак использовать бота:\n1. Выбери язык программирования на котором написан твой код\n2. Отправь мне код\n3. Выбери язык в который нужно переконвертировать твой код\n4. Держи результат\nТак же не забываем про ограничения сообщений телеграм!", reply_markup=keyboard)
@@ -137,7 +149,11 @@ async def convert(message: types.Message):
             types.InlineKeyboardButton(text="Ruby", callback_data="convert:Ruby"),
             types.InlineKeyboardButton(text="Rust", callback_data="convert:Rust"),
             types.InlineKeyboardButton(text="JavaScript", callback_data="convert:JavaScript"),
-            types.InlineKeyboardButton(text="Java", callback_data="convert:Java")
+            types.InlineKeyboardButton(text="Java", callback_data="convert:Java"),
+            types.InlineKeyboardButton(text="Julia", callback_data="convert:Julia"),
+            types.InlineKeyboardButton(text="Go", callback_data="convert:Go"),
+            types.InlineKeyboardButton(text="Lua", callback_data="convert:Lua"),
+            types.InlineKeyboardButton(text="Dart", callback_data="convert:Dart")
         ]
         keyboard.add(*buttons)
         await bot.send_message(message.chat.id, "Выберите язык в который будет переконвертирован ваш код:", reply_markup=keyboard)
